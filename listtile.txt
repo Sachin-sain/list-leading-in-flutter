@@ -1,0 +1,28 @@
+=>list tile in flutter
+import 'package:flutter/material.dart';
+
+void main()=> runApp(list());
+
+class list extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+ return MaterialApp(
+   debugShowCheckedModeBanner:  false,
+   home:  Scaffold(
+     body:
+     ListView(
+       children: <Widget>[
+         ListTile(
+           leading: Icon(Icons.network_wifi, color:Colors.blue,),
+           title: Text("Network & Setting"),
+           subtitle: Text("wi-fi, mobile data, internet"),
+           onTap: (){debugPrint ("Network & setting");},
+         )
+       ],
+     ),
+
+   ),
+ );
+  }
+
+}
